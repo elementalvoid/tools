@@ -16,6 +16,7 @@ if [ -d $folder ]
 then
   (cd $folder && git clone --mirror $repo)
 elif [! -e $folder ]
+then
   mkdir $folder
   (cd $folder && git clone --mirror $repo)
 fi
