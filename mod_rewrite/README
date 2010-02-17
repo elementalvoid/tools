@@ -1,0 +1,18 @@
+Tools for Apache mod_rewrite.
+
+Purpose:
+  Take in a file with a list of useragent strings and process them against
+  a mod_rewrite config file to determine which User Agents would be affected
+  by the config. This is meant to search for RedirectCond directives and
+  list which directives would cause an action on the User Agent.
+
+Usage:
+  Execute the script with no arguments to get usage info.
+
+rewritematch.pl:
+  Will process a rewrite.conf file and a file containing user agent strings.
+
+rewritematch_logs.pl:
+  Will directly process an Apache log file pulling out the user agent string
+  and process them against the rewrite.conf.
+
