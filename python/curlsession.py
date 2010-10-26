@@ -6,6 +6,8 @@ from StringIO import StringIO
 class CurlSession():
     """Use persistent pycurl object with automatic cookie tracking"""
     cookieRegex = re.compile("Set-Cookie: (.*); path=/")
+    # TODO: cookieRegex may be too restrictive
+    #       need to test paths other than /
 
     def __init__(self, url = None, userpass = None):
         self.cookie = ""
