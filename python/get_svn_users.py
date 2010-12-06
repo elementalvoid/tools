@@ -13,11 +13,7 @@ def tofile(filename, list):
 users_file = 'py_svn_users.out'
 print('Writing users list to %s.' % users_file)
 client = pysvn.Client()
-try:
-   url = raw_input('Enter Subversion Repository URL: (Ctrl-C to cancel)\n')
-except KeyboardInterrupt:
-   print()
-   sys.exit()
+url = "https://private.url.com/svn/"
 print('Getting rev_start')
 rev_start = client.info2(url, depth=pysvn.depth.empty)[0][1].values()[6].number
 print('rev_start -> %d' %rev_start)
